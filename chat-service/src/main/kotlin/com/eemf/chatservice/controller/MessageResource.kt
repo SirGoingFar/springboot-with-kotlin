@@ -1,5 +1,7 @@
-package com.eemf.chatservice
+package com.eemf.chatservice.controller
 
+import com.eemf.chatservice.service.MessageService
+import com.eemf.chatservice.service.MessageVM
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 

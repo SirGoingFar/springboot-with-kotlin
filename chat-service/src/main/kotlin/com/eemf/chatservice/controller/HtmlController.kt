@@ -1,7 +1,7 @@
-package com.eemf.chatservice
+package com.eemf.chatservice.controller
 
-import com.example.kotlin.chat.service.MessageService
-import com.example.kotlin.chat.service.MessageVM
+import com.eemf.chatservice.service.MessageService
+import com.eemf.chatservice.service.MessageVM
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.ui.set

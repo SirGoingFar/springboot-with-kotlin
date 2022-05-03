@@ -4,21 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10babadc-6fd8-4a21-aa81-c5ab4c953dad" name="Changes" comment="Genesis commit: setup multi-module [monorepo] project, complete blog-service" />
+    <list default="true" id="28508867-cf2e-4f27-b362-447d1edc3e67" name="Changes" comment="complete chat-service development">
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/Extensions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/controller/HtmlController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/controller/MessageResource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/repository/DataModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/repository/MessageRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/service/MessageService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/service/PersistentMessageService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/service/ViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/db/migration/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/static/resocket-core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/static/rsocket-flowable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/static/rsocket-types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/static/rsocket-websocket-client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/templates/chat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/test/kotlin/com/eemf/chatservice/TestExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/test/kotlin/com/eemf/chatservice/ChatServiceApplicationTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/test/kotlin/com/eemf/chatservice/ChatServiceApplicationTests.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/chat-service">
+      <ProjectState />
+    </projectState>
+  </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <task path="$PROJECT_DIR$/blog-service">
+        <task path="$PROJECT_DIR$/chat-service">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,30 +69,96 @@
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/5.3.19/1a977873f42c7b0f2af1ce5810517f315b65d735/spring-test-5.3.19-sources.jar!/org/springframework/test/web/servlet/result/MockMvcResultMatchers.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/5.3.19/1a977873f42c7b0f2af1ce5810517f315b65d735/spring-test-5.3.19-sources.jar!/org/springframework/test/web/servlet/RequestBuilder.java" root0="SKIP_INSPECTION" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
   <component name="MacroExpansionManager">
-    <option name="directoryName" value="nib46d3n" />
+    <option name="directoryName" value="sm8povlf" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="RunManager">
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="h2" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/chat-service/src/main/resources/db/migration" />
+      <recent name="$PROJECT_DIR$/chat-service/src/main/resources/static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ChatServiceApplication">
+    <configuration name="ChatKotlinApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/chat-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.eemf.chatservice.ChatKotlinApplicationTests&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ChatKotlinApplicationTests.test that messages posted to the API is stored" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/chat-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.eemf.chatservice.ChatKotlinApplicationTests.test that messages posted to the API is stored&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PleaseRunConfigurationType" factoryName="PleaseRunConfigurationType.Factory" target="//some:target" pleaseArgs="" pleaseRoot="" programArgs="" workingDir="">
       <method v="2" />
     </configuration>
-    <configuration name="BlogServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="blog-service.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.eemf.blogservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.eemf.blogservice.BlogServiceApplication" />
+    <configuration name="ChatServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="chat-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.eemf.chatservice.ChatServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.BlogServiceApplication" />
+        <item itemvalue="Gradle.ChatKotlinApplicationTests" />
+        <item itemvalue="Gradle.ChatKotlinApplicationTests.test that messages posted to the API is stored" />
       </list>
     </recent_temporary>
   </component>
@@ -60,19 +166,11 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Genesis commit: setup multi-module [monorepo] project, complete blog-service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Genesis commit: setup multi-module [monorepo] project, complete blog-service" />
+    <MESSAGE value="complete chat-service development" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete chat-service development" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
