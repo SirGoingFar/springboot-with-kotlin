@@ -1,22 +1,15 @@
 package com.eemf.chatservice.controller
 
-import com.eemf.chatservice.service.MessageService
-import com.eemf.chatservice.service.MessageVM
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
-import org.springframework.ui.set
 import org.springframework.web.bind.annotation.GetMapping
 
 @Controller
-class HtmlController(val messageService: MessageService) {
+class HtmlController {
 
   @GetMapping("/")
-  fun index(model: Model): String {
-    val messages: List<MessageVM> = messageService.latest()
-
-    model["messages"] = messages
-    model["lastMessageId"] = messages.lastOrNull()?.id ?: ""
-
-    return "chat"
+  suspend fun index(model: Model): String {
+    return "chatrs"
   }
+
 }

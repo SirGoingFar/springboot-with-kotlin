@@ -4,27 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28508867-cf2e-4f27-b362-447d1edc3e67" name="Changes" comment="complete chat-service development">
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/Extensions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/controller/HtmlController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/controller/MessageResource.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/repository/DataModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/repository/MessageRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/service/MessageService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/service/PersistentMessageService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/service/ViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/db/migration/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/static/resocket-core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/static/rsocket-flowable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/static/rsocket-types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/static/rsocket-websocket-client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/templates/chat.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/test/kotlin/com/eemf/chatservice/TestExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="28508867-cf2e-4f27-b362-447d1edc3e67" name="Changes" comment="refactor chat-service to be async and non-blocking with Spring WebFlux and Kotlin Coroutine">
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/BeanConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/templates/chatrs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/Extensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/Extensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/controller/HtmlController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/controller/HtmlController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/controller/MessageResource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/controller/MessageResource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/repository/MessageRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/repository/MessageRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/service/MessageService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/service/MessageService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/service/PersistentMessageService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/service/PersistentMessageService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/resources/static/resocket-core.js" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/resources/static/rsocket-core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/resources/templates/chat.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-service/src/test/kotlin/com/eemf/chatservice/ChatServiceApplicationTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/test/kotlin/com/eemf/chatservice/ChatServiceApplicationTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +48,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -81,7 +75,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="true" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -91,6 +85,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="h2" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -102,13 +97,13 @@
       <recent name="$PROJECT_DIR$/chat-service/src/main/resources/static" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ChatServiceApplication">
+  <component name="RunManager" selected="Gradle.ChatKotlinApplicationTests">
     <configuration name="ChatKotlinApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/chat-service" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.eemf.chatservice.ChatKotlinApplicationTests&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.example.kotlin.chat.ChatKotlinApplicationTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -148,6 +143,15 @@
     <configuration default="true" type="PleaseRunConfigurationType" factoryName="PleaseRunConfigurationType.Factory" target="//some:target" pleaseArgs="" pleaseRoot="" programArgs="" workingDir="">
       <method v="2" />
     </configuration>
+    <configuration default="true" type="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="ChatServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="chat-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.eemf.chatservice.ChatServiceApplication" />
@@ -158,6 +162,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.ChatKotlinApplicationTests" />
+        <item itemvalue="Gradle.ChatKotlinApplicationTests" />
         <item itemvalue="Gradle.ChatKotlinApplicationTests.test that messages posted to the API is stored" />
       </list>
     </recent_temporary>
@@ -166,11 +171,21 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="complete chat-service development" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete chat-service development" />
+    <MESSAGE value="refactor chat-service to be async and non-blocking with Spring WebFlux and Kotlin Coroutine" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor chat-service to be async and non-blocking with Spring WebFlux and Kotlin Coroutine" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

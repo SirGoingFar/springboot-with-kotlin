@@ -8,28 +8,39 @@ plugins {
 }
 
 group = "com.eemf"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.1"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
   mavenCentral()
-  jcenter()
   maven { url = uri("https://repo.spring.io/milestone") }
 }
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-actuator")
   implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
-  implementation("org.springframework.boot:spring-boot-starter-web")
 
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("com.github.javafaker:javafaker:1.0.2")
 
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-  implementation("org.jetbrains:markdown:0.2.2")
+  implementation("org.jetbrains:markdown:0.3.1")
 
-  implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
+  //Coroutine support
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactive")
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+  testImplementation("app.cash.turbine:turbine:0.3.0")
+
+  //WebFlux + R2DBC
+  implementation("org.springframework.boot:spring-boot-starter-webflux")
+  implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
+  implementation("io.r2dbc:r2dbc-h2")
+
+  //RSocket
+  implementation("org.springframework.boot:spring-boot-starter-rsocket")
+
   runtimeOnly("com.h2database:h2")
 
   testImplementation("org.springframework.boot:spring-boot-starter-test") {
