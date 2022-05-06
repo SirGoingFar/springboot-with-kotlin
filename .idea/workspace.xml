@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28508867-cf2e-4f27-b362-447d1edc3e67" name="Changes" comment="refactor chat-service to be async and non-blocking with Spring WebFlux and Kotlin Coroutine">
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/BeanConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/templates/chatrs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/RestCallHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/test/kotlin/com/eemf/chatservice/RestCallHandlerTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/Extensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/Extensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/controller/HtmlController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/controller/HtmlController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/controller/MessageResource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/controller/MessageResource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/repository/MessageRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/repository/MessageRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/service/MessageService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/service/MessageService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/service/PersistentMessageService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/kotlin/com/eemf/chatservice/service/PersistentMessageService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/resources/static/resocket-core.js" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/resources/static/rsocket-core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/resources/templates/chat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/test/kotlin/com/eemf/chatservice/ChatServiceApplicationTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/test/kotlin/com/eemf/chatservice/ChatServiceApplicationTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +17,9 @@
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/chat-service">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/product-service">
       <ProjectState />
     </projectState>
   </component>
@@ -48,9 +41,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
         <option value="HTML File" />
+        <option value="Kotlin Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -82,7 +76,12 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="sm8povlf" />
   </component>
+  <component name="ProjectId" id="28kbsAD0bYlHrAOnU7oN4QDiFZp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="h2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -90,14 +89,34 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="jdk.selected.JAVA_MODULE" value="11" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/chat-service/src/main/resources/db/migration" />
       <recent name="$PROJECT_DIR$/chat-service/src/main/resources/static" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.eemf.chatservice" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.ChatKotlinApplicationTests">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ChatServiceApplication">
     <configuration name="ChatKotlinApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -140,16 +159,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration default="true" type="PleaseRunConfigurationType" factoryName="PleaseRunConfigurationType.Factory" target="//some:target" pleaseArgs="" pleaseRoot="" programArgs="" workingDir="">
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <option name="AUTO_RESTART" value="false" />
+    <configuration default="true" type="PleaseTestConfigurationType" factoryName="PleaseRunConfigurationType.Factory" target="//some:target" pleaseRoot="" pleaseArgs="" tests="">
       <method v="2" />
     </configuration>
     <configuration name="ChatServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -159,6 +169,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="product-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.eemf.productservice.ProductServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="aws.lambda" factoryName="Remote">
+      <option name="credentialProviderId" />
+      <option name="regionId" />
+      <option name="functionName" />
+      <option name="input" />
+      <option name="inputIsFile" value="false" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.ChatKotlinApplicationTests" />
@@ -167,8 +192,28 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="refactor chat-service to be async and non-blocking with Spring WebFlux and Kotlin Coroutine">
+      <created>1651761456400</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651761456400</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28508867-cf2e-4f27-b362-447d1edc3e67" name="Changes" comment="refactor chat-service to be async and non-blocking with Spring WebFlux and Kotlin Coroutine" />
+      <created>1651763747398</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651763747398</updated>
+      <workItem from="1651763747399" duration="7981000" />
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
